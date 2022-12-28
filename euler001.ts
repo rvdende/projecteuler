@@ -6,10 +6,12 @@ function getMultiples(below: number, multiples: number[]) {
   while (count < below - 1) {
     console.log(count);
     count = count + 1;
-
+    let isMultiple = false;
     multiples.forEach((m) => {
-      if (count % m === 0) output.push(count);
+      if (count % m === 0) isMultiple = true;
     });
+
+    if (isMultiple) output.push(count);
   }
 
   return output;
